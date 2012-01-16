@@ -6,8 +6,13 @@ Plugin to support activities for {Redmine for Android}[http://market.android.com
 
 Plugin supports Redmine 1.0.x - 1.3.x
 
+Tested on:
+ - 1.0.5
+ - 1.1.3
+ - 1.2.3
+ - 1.3.0
+
 == Install
 
 1. Copy plugin to <Redmine install path>/vendor/plugins/redmine_android_client/
-2. Run rake db:migrate_plugins RAILS_ENV=production
-3. Restart redmine
+2. Restart redmine
