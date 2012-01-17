@@ -1,6 +1,10 @@
 require 'redmine'
 
 #require 'activities_controller_patch'
+begin
+require 'config/initializers/session_store.rb'
+rescue LoadError
+end
 
 Redmine::Plugin.register :redmine_android_client do
   name 'Redmine Android Client plugin'

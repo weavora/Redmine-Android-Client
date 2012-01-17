@@ -1,11 +1,14 @@
 class ApiActivitiesController < ApplicationController
   unloadable
+
+  before_filter :user_setup, :check_if_login_required, :set_localization
   before_filter :find_optional_project
 
   accept_key_auth :index
 
   def index
     request.format = :xml
+
     @days = Setting.activity_days_default.to_i
 
     if params[:from]
@@ -43,7 +46,7 @@ class ApiActivitiesController < ApplicationController
   def find_optional_project
     return true unless params[:id]
     @project = Project.find(params[:id])
-    #authorize
+
   rescue ActiveRecord::RecordNotFound
     render_404
   end

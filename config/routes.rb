@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.with_options :controller => 'api_activities', :action => 'index' do |activity|
-    activity.connect 'projects/:id/activities.xml', :format => /xml/
-    activity.connect 'activities.xml', :id => nil, :format => /xml/
+    activity.connect 'projects/:id/activities.:format', :format => /xml/
+    activity.connect 'activities..:format', :id => nil, :format => /xml/
   end
 end
 
