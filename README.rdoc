@@ -1,6 +1,6 @@
 = Redmine Android Client Plugin
 
-Plugin to support activities for {Redmine for Android}[http://market.android.com]
+Plugin to support activities for {Redmine for Android}[https://market.android.com/details?id=com.wvr.redmineclient&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS53dnIucmVkbWluZWNsaWVudCJd]
 
 == Versions Support
 
